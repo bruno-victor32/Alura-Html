@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><!--Aqui são as informações que eu vou passar para o meu navegador-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Contatos - Barbearia Alura</title>
+</head>
+<body><!--Aqui será as informações que eu quero exibir na página-->
+    <header><!--Cabeçalho do conteudo-->
+        <div class="caixa">
+            <h1>
+                <img src="logo.png" alt="Logo da Barbearia Alura ">
+            </h1>
+
+            <nav>
+                <ul class="navegacao">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>  
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <form ><!--Tag do formulario-->
+            <label for="nomeSobrenome">Nome e sobrenome</label><!--for indica que e uma etiqueta para o input nomeSobrenome-->
+            <input class="input-padrao" type="text" id="nomeSobrenome" required><!--require indica que esse campo e obrigatorio-->
+
+            <label for="email">Email</label>
+            <input class="input-padrao" type="email" id="email" required placeholder="seuemail@dominio.com">
+
+            <label for="telefone">Telefone</label>
+            <input class="input-padrao" type="tel" id="telefone"required placeholder="(XX) XXXXX-XXXX">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea class="input-padrao" id="mensagem" cols="70" rows="10" required></textarea><!--Tag de conteudo-->
+
+            <fieldset>
+                 <legend>Como prefere o nosso contato?</legend><!--Dentro da tag fieldset não temos paragrafo, temos titulo-->
+                <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+                <label for="radio-telefone"><input type="radio" name="contato" value="telefone"  id="radio-telefone">Telefone</label>
+                <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Qual horário prefere ser atendido?</legend>
+                <select name="" id="">
+                    <option value="">Manhã</option><!--Campo de conteudo-->
+                    <option value="">Tarde</option><!--Campo de conteudo-->
+                    <option value="">Noite</option><!--Campo de conteudo-->  
+                </select>
+            </fieldset>
+
+
+            <label class="checkbox"><input type="checkbox"  checked>Gostaria de receber nossas novidades por email?</label>
+            
+
+            <input type="submit" value="Enviar formulário" class="enviar"><!--Enviar os dados-->
+        </form>
+
+        <table><!--Criando uma tabela-->
+            <thead><!--Cabeçalho da tabela-->
+                <tr><!--Linha da tabela-->
+                    <th>Dia</th><!--Essa tag indica que e o cabeçalho da tabela-->
+                    <th>Horário</th>
+                </tr> 
+            </thead>
+            <tbody><!--Corpo da Tabela-->
+                <tr><!--Linha da tabela-->
+                    <td>Segunda</td><!--Coluna da tabela-->
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr><!--Linha da tabela-->
+                    <td>Quarta</td><!--Coluna da tabela-->
+                    <td>8h ~ 20h</td>
+                </tr>     
+                <tr><!--Linha da tabela-->
+                    <td>Sexta</td><!--Coluna da tabela-->
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td colspan="5">São Paulo</td><!--Estou juntando 2 colunas para mostrar uma linha ou célula-->
+                </tr> 
+            </tbody>
+              
+        </table>
+
+    </main>
+
+    <footer><!--Rodapé-->
+        <img src="logo-branco.png" alt="Logo da Barbearia Alura">
+        <p class="copyright">&copy; Copyright Barbearia Alura - 2019 </p> <!--&copy e um caractere especial tipo emoji chamado Unicode-->
+    </footer>
+
+</body>
+</html>

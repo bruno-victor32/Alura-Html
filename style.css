@@ -1,51 +1,155 @@
-
-#banner {
-    width: 100%; /*Largura*/
+header {
+    background: #BBBBBB;
+    padding: 20px 0;/*Espaçamento interno de 20px para cima e para baixo e 0 para as laterais*/
 }
 
-.principal{
-        background: #CCCCCC;/*Cor de fundo*/
-        padding: 30px;
+.caixa {
+    position: relative;
+    width: 940px;/*Estou colocando o valor de uma largura fixa*/ 
+    margin: 0 auto;/*Quero que o espeçamento externo para cima e para baixo seja 0 e para as laterais seja calculada automatico*/
 }
 
-.titulo-principal{
-    padding-left: 20px;
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0;
 }
 
-.titulo-centralizado{
+nav li{ /*Todos os itens da lista que estão dentro da tag de navegação (nav)*/
+    display: inline; /*Deixando os links de maneira horizontal*/
+    margin: 0 0 0 15px;/*Aumentando a separação entre os itens, utilizando o margin que proporcional o espaçamento externo */
+}
+
+nav a {
+    text-transform: uppercase;/*Tramsformando o texto  da tag (a) em maiusculo*/
+    color: #000000;
+    font-weight: bold;/*Peso da fonte em negrito*/
+    font-size: 22px;/*Tamanho da fonte*/
+    text-decoration: none;/*Retirando o sublinhado do texto*/
+
+}
+
+nav a:hover{ /*Quando o mouse estiver em cima dos links dentro do menu de navegação o mesmo tera um comportamento diferenciado*/
+ color: #C78C19;
+ text-decoration: underline;/*Vai ficar sublinhado quando o mouse estiver em cima do link do menu de navegação */
+}
+
+.produtos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;/*Espaçamento interno*/
+}
+
+.produtos li {
+    display: inline-block;
     text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;/*Tamanho, Tipo e a cor da borda*/
+    border-radius: 10px; /*Arredondando as bordas*/
 
 }
 
-p{
+.produtos li:hover {
+    border-color: #C78C19; /*Quando o mouse estiver por cima eu mudo a cor dos itens*/
+}
+
+.produtos li:active{/*Quando o mouse estiver com clique pressionado */
+    border-color:#088C19 ; /*Eu quero que as bordas fiquem verdes*/
+}
+
+.produtos li:hover h2{/*Quero que o h2 quando o mouse estiver por cima do li da classe produtos ele tenha o tamanho de fonte de 40px*/
+ font-size: 34px;
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao{
+    font-size: 18px;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px ;
+}
+
+footer{
     text-align: center;
-
+    background:url("bg.jpg");/*Colocando uma imagem de fundo no css*/
+    padding: 40px;
 }
 
-#missao{
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+main{
+    width: 940px;
+    margin: 0 auto;
+}
+
+form {
+    margin: 40px  0;
+}
+
+form label, form legend {
+    display: block;
     font-size: 20px;
+    margin: 0 0 10px;
 }
 
-em strong{ /*Alterando a cor de todos conteudos dentro da tag <strongs> que estão dentro das tags <em>*/
-    color: #FF0000;
-}
-
-.itens{
-    font-style: italic;
-}
-
-.beneficios{
-    background: #FFFFFF;
-    padding: 20px;/*Espaçamento interno*/
-}
-
-ul{
-    display:inline-block;
-    vertical-align:top ;
-    width: 20%;
-    margin-right: 15%;/*Espaçamento externo para direita*/
-}
-
-.imagemBeneficios{ /*Pegando a classe*/
+.input-padrao { /*Nesse caso vou alterar o form input e o form textarea*/
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
     width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0;
+} 
+
+.enviar {/*Estilizando o botão de enviar*/
+    width: 40%;/*Aumentando a largura*/
+    padding: 15px 0;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    /*transition: 1s background;Vai demorar 1 segundo para alterar a cor do botão quando o mouse passar por cima*/
+    transition: 1s all;/*A transição de todos elementos vai demorar um segundo para acontecer*/
+    cursor: pointer;/*Sempre que o mouse passar por cima do botão o ponteiro vira mãozinha para mostrar ao usuario que e clicavel*/
+}
+
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2);/*Aumentando o botão de tamanho*/
+    /*transform: rotate(70deg) scale(1.2);/*Rodar o botão em 70 graus e Aumentar o botão de tamanho*/
+}
+
+table{
+    margin: 20px 0 40px;/*Espaçamento eterno de 20 px para cima e 40px para baixo*/
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid #000000;
+    padding: 8px 15px ;/*Espaçamento interno de 8 px para cima e para baixo e 15 px para as laterais*/
+    text-align: center;
 }
