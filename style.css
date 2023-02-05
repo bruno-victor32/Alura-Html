@@ -1,7 +1,12 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 header {
     background: #BBBBBB;
     padding: 20px 0;/*Espaçamento interno de 20px para cima e para baixo e 0 para as laterais*/
 }
+
 
 .caixa {
     position: relative;
@@ -9,13 +14,13 @@ header {
     margin: 0 auto;/*Quero que o espeçamento externo para cima e para baixo seja 0 e para as laterais seja calculada automatico*/
 }
 
-nav{
+nav {
     position: absolute;
     top: 110px;
     right: 0;
 }
 
-nav li{ /*Todos os itens da lista que estão dentro da tag de navegação (nav)*/
+nav li { /*Todos os itens da lista que estão dentro da tag de navegação (nav)*/
     display: inline; /*Deixando os links de maneira horizontal*/
     margin: 0 0 0 15px;/*Aumentando a separação entre os itens, utilizando o margin que proporcional o espaçamento externo */
 }
@@ -29,12 +34,12 @@ nav a {
 
 }
 
-nav a:hover{ /*Quando o mouse estiver em cima dos links dentro do menu de navegação o mesmo tera um comportamento diferenciado*/
+nav a:hover { /*Quando o mouse estiver em cima dos links dentro do menu de navegação o mesmo tera um comportamento diferenciado*/
  color: #C78C19;
  text-decoration: underline;/*Vai ficar sublinhado quando o mouse estiver em cima do link do menu de navegação */
 }
 
-.produtos{
+.produtos {
     width: 940px;
     margin: 0 auto;
     padding: 50px 0;/*Espaçamento interno*/
@@ -57,11 +62,11 @@ nav a:hover{ /*Quando o mouse estiver em cima dos links dentro do menu de navega
     border-color: #C78C19; /*Quando o mouse estiver por cima eu mudo a cor dos itens*/
 }
 
-.produtos li:active{/*Quando o mouse estiver com clique pressionado */
+.produtos li:active {/*Quando o mouse estiver com clique pressionado */
     border-color:#088C19 ; /*Eu quero que as bordas fiquem verdes*/
 }
 
-.produtos li:hover h2{/*Quero que o h2 quando o mouse estiver por cima do li da classe produtos ele tenha o tamanho de fonte de 40px*/
+.produtos li:hover h2 {/*Quero que o h2 quando o mouse estiver por cima do li da classe produtos ele tenha o tamanho de fonte de 40px*/
  font-size: 34px;
 }
 
@@ -70,7 +75,7 @@ nav a:hover{ /*Quando o mouse estiver em cima dos links dentro do menu de navega
     font-weight: bold;
 }
 
-.produto-descricao{
+.produto-descricao {
     font-size: 18px;
 }
 
@@ -80,21 +85,16 @@ nav a:hover{ /*Quando o mouse estiver em cima dos links dentro do menu de navega
     margin-top: 10px ;
 }
 
-footer{
+footer {
     text-align: center;
     background:url("bg.jpg");/*Colocando uma imagem de fundo no css*/
-    padding: 40px;
+    padding: 40px 0;
 }
 
 .copyright {
     color: #FFFFFF;
     font-size: 13px;
-    margin-top: 20px;
-}
-
-main{
-    width: 940px;
-    margin: 0 auto;
+    margin-top: 20px 0 0;
 }
 
 form {
@@ -132,24 +132,146 @@ form label, form legend {
     cursor: pointer;/*Sempre que o mouse passar por cima do botão o ponteiro vira mãozinha para mostrar ao usuario que e clicavel*/
 }
 
-.enviar:hover{
+.enviar:hover {
     background: darkorange;
     transform: scale(1.2);/*Aumentando o botão de tamanho*/
     /*transform: rotate(70deg) scale(1.2);/*Rodar o botão em 70 graus e Aumentar o botão de tamanho*/
 }
 
-table{
+table {
     margin: 20px 0 40px;/*Espaçamento eterno de 20 px para cima e 40px para baixo*/
 }
 
-thead{
+thead {
     background: #555555;
     color: white;
     font-weight: bold;
 }
 
-td, th{
+td, th {
     border: 1px solid #000000;
     padding: 8px 15px ;/*Espaçamento interno de 8 px para cima e para baixo e 15 px para as laterais*/
+    /*text-align: center;*/
+}
+
+/*CSS  da página inicial*/
+.banner {
+    width: 100%;/*Deixando a imagem 100% da largura da página*/
+}
+
+.titulo-principal {
     text-align: center;
+    font-size: 2em; /*2em significa que e 2 vezes o tamanho base que e 15px da minha fonte, ou seja, essa fonte terá 30px*/
+    margin: 0 0 1em; /*Vai ter o tamanho da fonte 1 estapço para baixo do tamanho da fonte padrão*/
+    clear: left; /*Limpa o float*/
+    /*text-shadow: 2px 2px #FF0000; sOMBRAS EM TEXTOS*/
+}
+
+/*.titulo-principal::first-letter { Pegando a primeira letra do titulo principal
+    font-weight: bold ;
+}*/
+
+.principal {
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.principal p {
+    margin:  0 0 1em;/*Vai dar um espaço proporcional da fonte conforme as tags "p"*/
+}
+
+.principal strong { 
+    font-weight: bold;/*Peso da fonte*/
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios {
+   width: 120px ; 
+   float: left;
+   margin: 0 20px 20px 0; /*0 para cima, 20px para direita, 20px para baixo e 0 para a esquerda*/
+}
+
+.mapa {
+    padding: 3em 0 ;/*Espaçamento interno de 3em para cima e para baixo e 0 para as laterais*/
+    background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto; 
+}
+
+.mapa p {
+    margin: 0 0 2em;/*O paragrafo que está dentro da classe mapa tenha um espaçamento externo para baixo de 2em*/
+    text-align: center;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+    
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+   width: 40%;
+   display: inline-block;
+   vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;/*Altura da linha*/
+}
+
+.itens:first-child {/*Vai pegar do primeiro da classe itens que e o item da lista */
+    font-weight: bold;
+}
+
+.itens:before {/*A classe itens antes de qualquer conteudo*/
+    content: "✭";/*vou colocar minha estrela*/
+}
+
+.imagem-beneficios {
+    width: 60%;
+    opacity: 1;
+    transition: 400ms;
+    box-shadow: 10px 10px 10px 0 #000000; /*sombra*/
+}
+
+.imagem-beneficios:hover {
+    opacity: 0.3;
+}
+
+.video {
+    width: 560px;
+    margin: 2em auto;/*Espaçamento externo de 1em para cima e para baixo e auto para as laterais*/
+}
+
+/*Media Query - Adaptando a tela para celular*/ 
+@media screen and (max-widht: 480px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
+
 }
